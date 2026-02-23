@@ -108,8 +108,6 @@ int main() {
 
     int count = count_digit(n);
 
-    // cout << count << endl;
-
     cout << Armstrong(count, n) << endl; 
 
     return 0;
