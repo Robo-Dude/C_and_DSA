@@ -20,14 +20,31 @@ using namespace std;
 
 int fib(int n){
 
-    for(int i = n; i > 0; i--){
+    int a{0} , b{1};
 
-        int sum = (i-2) + (i-1);
+    if (n == 0){
 
-        if (sum == n){
-            cout << "" ;
-        }
+        return 0;
+
     }
+    else if (n == 1){
+
+        return 1;
+
+    }
+
+    for (int i = 2; i <= n; i++){
+
+        int next = a + b;
+
+        // cout << i << " , " << next << endl;
+
+        a = b;
+
+        b = next;
+    }
+
+    return b;
 }
 
 int main(){
@@ -38,8 +55,7 @@ int main(){
 
     cin >> n;
 
-    fib(n);
-
+    cout << fib(n) << endl;
 
 
 }
