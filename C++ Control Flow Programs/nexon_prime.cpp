@@ -15,7 +15,6 @@
 // sum of the digits of the square is 9 (1 
 // + 4 + 4) which is not equal to 12.
 
-
 #include <iostream>
 
 using namespace std;
