@@ -107,8 +107,6 @@ void full_inverted_star(){
 }
 
 
-
-
 int main(){
 
     half_inverted_star();
