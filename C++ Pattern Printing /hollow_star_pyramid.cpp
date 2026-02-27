@@ -36,7 +36,6 @@
 // Calculate the last column by Last Column = (length _of_row * 2 - (2 * Current_row - 1))
 // Print star( "*" ) at the first column and last column and proceed to the next row.
 
-
 #include <iostream>
 
 using namespace std;
