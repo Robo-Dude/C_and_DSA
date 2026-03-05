@@ -23,6 +23,7 @@
 // A variable name count maintains the value of natural numbers to be printed.  
 // There are 3 ways to print Floyd's pattern triangle pyramid:
 
+// using for loop.
 // Using While loop.
 // Using Recursion.
 
@@ -31,7 +32,7 @@
 
 using namespace std;
 
-int main(){
+void using_for_loop(){
 
     int n;
 
@@ -39,12 +40,98 @@ int main(){
 
     cin >> n;
 
-    for(int i = 0; i < n; i++){
+    int count = 1;
 
-        for(int j = 0; j < n; j++){
+    for(int i = 1; i <= n; i++){
 
-            
+        for(int j = 1; j <= i; j++){
+
+            cout << count << " " ;
+            count++;
+
         }
+        cout << endl;
     }
 
+}
+
+void using_while_loop(){
+
+    int n;
+
+    cout << "Enter: " ;
+
+    cin >> n;
+
+    int count = 1;
+    int i = 1;
+    int j = 1;
+
+    while(i <= n){
+
+        while(j <= i){
+
+            cout << count << " ";
+            count++;
+            j = j + 1;
+
+        }
+        j = 1; 
+        i++;
+
+        cout << endl;
+    }
+
+}
+
+void recursive_floyd(int r, int cr, int count){
+
+    int j = 1;
+
+    while(j <= cr){
+
+        cout << count << " ";
+        count++;
+        j++;
+
+    }
+    cout << endl;
+
+    if (r == 1){
+
+        return;
+    }
+
+    recursive_floyd(r - 1, cr + 1, count);
+
+}
+
+void using_recursive(){
+
+    int n;
+
+    cout << "Enter: " ;
+
+    cin >> n;
+
+    int limit = 1;
+
+    recursive_floyd(n, 1, 1);
+
+}
+
+int main(){
+
+
+    using_for_loop();
+
+    cout << endl;
+
+    using_while_loop();
+
+    cout << endl;
+
+    using_recursive();
+
+    return 0;
 }
