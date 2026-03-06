@@ -15,12 +15,12 @@
 
 using namespace std;
 
-int compute_factorial(int n) {
+long long int compute_factorial(int n) {
 
-    int factor {1};
+    long long int factor {1};
 
-    if (n == 0) 
-        return 0; 
+    if (n <= 1) 
+        return 1; 
 
     while(n > 1){
 
@@ -32,7 +32,7 @@ int compute_factorial(int n) {
     return factor;
 }
 
-int recurive_factorial(int n) {
+long long int recurive_factorial(long long int n) {
 
     if (n == 1){
 

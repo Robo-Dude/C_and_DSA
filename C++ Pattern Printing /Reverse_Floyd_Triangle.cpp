@@ -37,8 +37,6 @@ void floyd_reverse(int n){
 
 }
 
-
-
 int main(){
 
     int n;
